@@ -1,0 +1,26 @@
+.main-app-container {
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .color-tiles-container {
+    max-width: 40rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .shuffle-all-icon {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--primary);
+    color: white;
+    font-weight: 500;
+    width: 8rem;
+  }
+}

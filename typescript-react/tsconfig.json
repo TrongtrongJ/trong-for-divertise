@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "~/*": ["./src/assets/*"],
+      "@src/*": ["./src/*"],
+      "@utils": ["./src/utils"],
+      "@store/*": ["./src/store/*"],
+      "@composables/*": ["./src/composables/*"],
+      "@data/*": ["./src/data/*"],
+      "@components/*": ["./src/components/*"],
+    },
+    "types": [
+      "node", 
+      "vite/client", 
+    ],
+  },
+  "include": ["src", "components.d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
+  "exclude": ["dist", "node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

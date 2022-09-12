@@ -1,0 +1,20 @@
+rescript = 1
+rule cp
+  command = cmd.exe /C copy /Y $i $out >NUL
+rule touch
+ command = cmd.exe /C type nul >>$out & copy $out+,, >NUL
+o App.cmi : cp ..\bs\src\App.cmi
+o App.cmj : cp ..\bs\src\App.cmj
+o App.cmt : cp ..\bs\src\App.cmt
+o App.res : cp ..\..\src\App.res
+o Index.cmi : cp ..\bs\src\Index.cmi
+o Index.cmj : cp ..\bs\src\Index.cmj
+o Index.cmt : cp ..\bs\src\Index.cmt
+o Index.res : cp ..\..\src\Index.res
+o ReactDomExperimental.cmi : cp ..\bs\src\bindings\ReactDomExperimental.cmi
+o ReactDomExperimental.cmj : cp ..\bs\src\bindings\ReactDomExperimental.cmj
+o ReactDomExperimental.cmt : cp ..\bs\src\bindings\ReactDomExperimental.cmt
+o ReactDomExperimental.res : cp ..\..\src\bindings\ReactDomExperimental.res
+o ReactDomExperimental.resi : cp ..\..\src\bindings\ReactDomExperimental.resi
+o ReactDomExperimental.cmti : cp ..\bs\src\bindings\ReactDomExperimental.cmti
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj 

@@ -1,0 +1,35 @@
+.color-tile-outer-container {
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  margin: 0.4rem;
+  transition: 0.2s;
+
+  &:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+  }
+
+  .color-tile-inner-container {
+    padding: 1rem;
+    .color-tile {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    .color-code {
+      cursor: pointer;
+      text-align: center;
+      user-select: none;
+
+      :hover:before {
+        content: "shuffle ?";
+      }
+
+      :hover span {
+        display: none;
+      }
+    }
+  }
+}
