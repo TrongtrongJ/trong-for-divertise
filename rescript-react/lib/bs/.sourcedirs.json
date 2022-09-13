@@ -1,1 +1,1 @@
-{ "dirs" : [ "src" , "src\\scss" , "src\\scss\\ui" , "src\\bindings" ] , "pkgs" : [ [ "@rescript\\react" , "D:\\test-for-divertise\\rescript-react\\node_modules\\@rescript\\react" ] ] , "generated" : [] }
+{ "dirs" : [ "src" , "src\\scss" , "src\\scss\\ui" , "src\\components" , "src\\bindings" ] , "pkgs" : [ [ "@rescript\\react" , "D:\\test-for-divertise\\rescript-react\\node_modules\\@rescript\\react" ] ] , "generated" : [] }

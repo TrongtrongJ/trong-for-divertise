@@ -42,27 +42,15 @@ let make = () => {
   let (state, dispatch) = React.useReducer(reducer, initialState)
 
   <div className="main-app-container">
-    <div className="app-header-container">
-      <h1 className="user-name">{ React.string(state.name) }</h1>
-      <img src="/icons/divertise-asia.webp" />
-    </div>
+    <appHeader name={state.name}></appHeader>
     <div className="color-tiles-container">
-      {state.colorList
-      ->Belt.Array.mapWithIndex((i, _) => {
-        <div className="color-tile-outer-container" key={Belt.Int.toString(i)}>
-          <div className="color-tile-inner-container">
-            <div 
-              className="color-tile"  
-              style={ReactDOM.Style.make(
-                ~backgroundColor={state.colorList[i]},
-              (),)}
-            ></div>
-            <div className="color-code" onClick={_ => i->ReshuffleSingle->dispatch} >
-              <div>
-                <span>{ React.string(state.colorList[i]) }</span>
-              </div>
-            </div>
-          </div>
+      {state.colorList->Belt.Array.mapWithIndex((idx, color) => {
+        <div key={Belt.Int.toString(idx)}>
+          <appColorTile 
+            colorHex={color}
+            reshuffleSingle={i => ReshuffleSingle -> dispatch} 
+            colorTileIndex=idx
+          ></appColorTile>
         </div>
       })
       ->React.array}

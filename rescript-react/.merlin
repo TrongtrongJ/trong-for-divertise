@@ -7,6 +7,8 @@ S D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml
 B D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml
 S src
 B lib\bs\src
+S src\components
+B lib\bs\src\components
 S src\bindings
 B lib\bs\src\bindings
 ####BSB GENERATED: NO EDIT}

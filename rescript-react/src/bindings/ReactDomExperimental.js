@@ -22,6 +22,5 @@ function createBlockingRootWithId(id) {
 export {
   createRootWithId ,
   createBlockingRootWithId ,
-  
 }
 /* react-dom Not a pure module */

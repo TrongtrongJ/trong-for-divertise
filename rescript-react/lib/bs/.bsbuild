@@ -1,7 +1,9 @@
-3
+5
 App
 Index
+AppHeader
+AppColorTile
 ReactDomExperimental
-src	src\bindings	
-1
+src	src\components	src\bindings	
+1
 0

@@ -11,10 +11,18 @@ o Index.cmi : cp ..\bs\src\Index.cmi
 o Index.cmj : cp ..\bs\src\Index.cmj
 o Index.cmt : cp ..\bs\src\Index.cmt
 o Index.res : cp ..\..\src\Index.res
+o AppHeader.cmi : cp ..\bs\src\components\AppHeader.cmi
+o AppHeader.cmj : cp ..\bs\src\components\AppHeader.cmj
+o AppHeader.cmt : cp ..\bs\src\components\AppHeader.cmt
+o AppHeader.res : cp ..\..\src\components\AppHeader.res
+o AppColorTile.cmi : cp ..\bs\src\components\AppColorTile.cmi
+o AppColorTile.cmj : cp ..\bs\src\components\AppColorTile.cmj
+o AppColorTile.cmt : cp ..\bs\src\components\AppColorTile.cmt
+o AppColorTile.res : cp ..\..\src\components\AppColorTile.res
 o ReactDomExperimental.cmi : cp ..\bs\src\bindings\ReactDomExperimental.cmi
 o ReactDomExperimental.cmj : cp ..\bs\src\bindings\ReactDomExperimental.cmj
 o ReactDomExperimental.cmt : cp ..\bs\src\bindings\ReactDomExperimental.cmt
 o ReactDomExperimental.res : cp ..\..\src\bindings\ReactDomExperimental.res
 o ReactDomExperimental.resi : cp ..\..\src\bindings\ReactDomExperimental.resi
 o ReactDomExperimental.cmti : cp ..\bs\src\bindings\ReactDomExperimental.cmti
-build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj 
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj AppHeader.cmi AppHeader.cmj AppColorTile.cmi AppColorTile.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj 

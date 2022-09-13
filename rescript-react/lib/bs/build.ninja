@@ -1,30 +1,36 @@
 rescript = 1
 g_finger := D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml\install.stamp
 rule astj
-  command = "D:\test-for-divertise\rescript-react\node_modules\.pnpm\rescript@9.1.4\node_modules\rescript\win32\bsc.exe"  -warn-error +101 -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
+  command = "D:\test-for-divertise\rescript-react\node_modules\rescript\win32\bsc.exe"  -warn-error +101 -bs-v 10.0.1 -bs-jsx 3  -absname -bs-ast -o $out $i
 o src\App.ast : astj ..\..\src\App.res
 rule deps
-  command = "D:\test-for-divertise\rescript-react\node_modules\.pnpm\rescript@9.1.4\node_modules\rescript\win32\bsb_helper.exe" -hash 9fe0299557794f10c2ca95066772daf1 $in
+  command = "D:\test-for-divertise\rescript-react\node_modules\rescript\win32\bsb_helper.exe" -hash 3708d9fbac36ffa04bd015a7b35e2276 $in
   restat = 1
 o src\App.d : deps src\App.ast
 rule mij
-  command = "D:\test-for-divertise\rescript-react\node_modules\.pnpm\rescript@9.1.4\node_modules\rescript\win32\bsc.exe" -I "src\bindings" -I "src\scss\ui" -I "src\scss" -I src -I "D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml"   -warn-error +101 -bs-package-name template -bs-package-output es6:$in_d:.js -bs-v $g_finger $i
+  command = "D:\test-for-divertise\rescript-react\node_modules\rescript\win32\bsc.exe" -I "src\bindings" -I "src\components" -I "src\scss\ui" -I "src\scss" -I src -I "D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml"   -warn-error +101 -bs-package-name template -bs-package-output es6:$in_d:.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src\App.cmj src\App.cmi ..\..\src\App.js : mij src\App.ast
 o src\Index.ast : astj ..\..\src\Index.res
 o src\Index.d : deps src\Index.ast
 o src\Index.cmj src\Index.cmi ..\..\src\Index.js : mij src\Index.ast
+o src\components\AppHeader.ast : astj ..\..\src\components\AppHeader.res
+o src\components\AppHeader.d : deps src\components\AppHeader.ast
+o src\components\AppHeader.cmj src\components\AppHeader.cmi ..\..\src\components\AppHeader.js : mij src\components\AppHeader.ast
+o src\components\AppColorTile.ast : astj ..\..\src\components\AppColorTile.res
+o src\components\AppColorTile.d : deps src\components\AppColorTile.ast
+o src\components\AppColorTile.cmj src\components\AppColorTile.cmi ..\..\src\components\AppColorTile.js : mij src\components\AppColorTile.ast
 o src\bindings\ReactDomExperimental.ast : astj ..\..\src\bindings\ReactDomExperimental.res
 o src\bindings\ReactDomExperimental.d : deps src\bindings\ReactDomExperimental.ast src\bindings\ReactDomExperimental.iast
 o src\bindings\ReactDomExperimental.iast : astj ..\..\src\bindings\ReactDomExperimental.resi
 rule mi
-  command = "D:\test-for-divertise\rescript-react\node_modules\.pnpm\rescript@9.1.4\node_modules\rescript\win32\bsc.exe" -I "src\bindings" -I "src\scss\ui" -I "src\scss" -I src -I "D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml"   -warn-error +101 -bs-v $g_finger $i
+  command = "D:\test-for-divertise\rescript-react\node_modules\rescript\win32\bsc.exe" -I "src\bindings" -I "src\components" -I "src\scss\ui" -I "src\scss" -I src -I "D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml"   -warn-error +101 -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src\bindings\ReactDomExperimental.cmi : mi src\bindings\ReactDomExperimental.iast
 rule mj
-  command = "D:\test-for-divertise\rescript-react\node_modules\.pnpm\rescript@9.1.4\node_modules\rescript\win32\bsc.exe" -bs-read-cmi -I "src\bindings" -I "src\scss\ui" -I "src\scss" -I src -I "D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml"   -warn-error +101 -bs-package-name template -bs-package-output es6:$in_d:.js -bs-v $g_finger $i
+  command = "D:\test-for-divertise\rescript-react\node_modules\rescript\win32\bsc.exe" -bs-read-cmi -I "src\bindings" -I "src\components" -I "src\scss\ui" -I "src\scss" -I src -I "D:\test-for-divertise\rescript-react\node_modules\@rescript\react\lib\ocaml"   -warn-error +101 -bs-package-name template -bs-package-output es6:$in_d:.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src\bindings\ReactDomExperimental.cmj ..\..\src\bindings\ReactDomExperimental.js : mj src\bindings\ReactDomExperimental.ast src\bindings\ReactDomExperimental.cmi
