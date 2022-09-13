@@ -45,13 +45,12 @@ let make = () => {
     <appHeader name={state.name}></appHeader>
     <div className="color-tiles-container">
       {state.colorList->Belt.Array.mapWithIndex((idx, color) => {
-        <div key={Belt.Int.toString(idx)}>
-          <appColorTile 
-            colorHex={color}
-            reshuffleSingle={i => ReshuffleSingle -> dispatch} 
-            colorTileIndex=idx
-          ></appColorTile>
-        </div>
+        <appColorTile 
+          colorHex={color}
+          key={Belt.Int.toString(idx)}
+          reshuffleSingle={i => ReshuffleSingle -> dispatch} 
+          colorTileIndex=idx
+        ></appColorTile>
       })
       ->React.array}
     </div>
